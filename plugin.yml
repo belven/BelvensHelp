@@ -1,0 +1,45 @@
+name: BelvensHelp
+main: belven.help.HelpManager
+version: 1
+
+commands:
+   rules:
+      description: Gives the player a book containing the servers rules
+      usage: /rules
+      permission: BelvensHelp.rules
+      permission-message: You don't have BelvensHelp.rules
+   arenashelp:
+      description: Gives the player a book containing the arenas guide
+      usage: /arenashelp
+      permission: BelvensHelp.arenas
+      permission-message: You don't have BelvensHelp.arenas
+   classeshelp:
+      description: Gives the player a book containing the classes guide
+      usage: /classeshelp
+      permission: BelvensHelp.classes
+      permission-message: You don't have BelvensHelp.classes
+   teamshelp:
+      description: Gives the player a book containing the teams guide
+      usage: /teamshelp
+      permission: BelvensHelp.teams
+      permission-message: You don't have BelvensHelp.teams
+permissions:
+    BelvensHelp.*:
+        description: Gives access to all of BelvensHelp commands
+        children:
+            BelvensHelp.rules: true
+            BelvensHelp.arenas: true
+            BelvensHelp.classes: true
+            BelvensHelp.teams: true
+    BelvensHelp.rules:
+        description: Gives the player the ability to use /rules
+        default: true
+    BelvensHelp.arenas:
+        description: Gives the player the ability to use /arenashelp
+        default: true
+    BelvensHelp.classes:
+        description: Gives the player the ability to use /classeshelp
+        default: true
+    BelvensHelp.teams:
+        description: Gives the player the ability to use /teamshelp
+        default: true
